@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Istok+Web&family=Montserrat:wght@700&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Red+Hat+Text:wght@700&display=swap');
+
+.features-section{
+    width: 100%;
+    height: auto;
+    max-width: 2000px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 160px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .features-bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+        mix-blend-mode: luminosity;
+        filter: blur(2px);
+        
+    }
+
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: max-content;
+        padding-top: 130px;
+
+        .line{
+            height: 8px ;
+            background-color: #632B8B;
+            box-shadow: -10px 6px 4px rgba(0, 0, 0, 0.25);
+            transform: rotate(0deg);    
+            width: 193.87px;        
+        }
+
+        h1{
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 80px;
+            line-height: 103%;
+            text-align: center;
+            letter-spacing: 0.055em;
+            color: #FFFFFF;
+            text-shadow: 6px 10px 5px rgba(0, 0, 0, 0.63);            
+            padding-left:85px;
+            padding-right:85px;
+        }
+    }
+
+
+    .features-container{
+        display: flex;
+        margin-top: 100px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+       
+
+        .feature{
+            width: 278.64px;
+            min-height: 385px;
+            border: 0.8px solid #000000;
+            box-shadow: 0px 14px 37px 12px rgba(0, 0, 0, 0.25);
+            border-radius: 12px;     
+            padding: 60px 36px; 
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+
+            margin: 25px;
+
+            h1{
+                font-family: 'Istok Web';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 21px;
+                line-height: 30px;
+                text-align: center;
+                color: #FFFFFF;
+
+                margin-top: 45px;
+            }
+    
+            p{
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 27px;
+                color: #8A8A8A;  
+                
+                margin-top: 16px;
+            }
+        }
+
+        .feature:hover{
+            background-color: #632B8B;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+}
+
+@media (max-width:1008px){
+    .features-section{
+        .title{
+            .line{
+                width: 123.87px;    
+            }
+
+            h1{
+                font-size: 50px;
+                padding-left:55px;
+                padding-right:55px;
+            }
+        }
+    }
+}
+
+@media (max-width:700px){
+    .features-section{
+        
+        .title{
+            padding-top: 130px;
+            .line{
+                width: 83.87px;    
+            }
+
+            h1{
+                font-size: 40px;
+                padding-left:25px;
+                padding-right:25px;
+            }
+        }
+
+        .features-container{
+            margin-top: 50px;
+            .feature{
+                margin: 10px;
+            }
+        }
+    }
+}
+
+@media(max-width:618px){
+    .features-section{
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width:480px){
+    .features-section{
+        .title{
+            
+            .line{
+                width: 53.87px;    
+            }
+
+            h1{
+                font-size: 32px;
+                padding-left:15px;
+                padding-right:15px;
+            }
+        }
+
+        .features-container{
+            margin-top: 50px;
+            .feature{
+                margin: 10px;
+            }
+        }
+    }
+}

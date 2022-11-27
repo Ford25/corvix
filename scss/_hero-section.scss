@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Red+Hat+Text:wght@700&display=swap');
+
+.hero-section{
+    width: 100%;
+    height: auto;
+    max-width: 2000px;
+    padding: 0 71px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding-bottom: 195px;
+
+    .background{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+        z-index: -1;
+        mix-blend-mode: luminosity;
+        filter: blur(2px);
+    }
+
+    .left-side{
+        margin: 0;
+        max-width: 565px;
+        margin-top: 200px;
+
+        h1{
+            font-family: 'Red Hat Text';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 140px;
+            line-height: 103%;
+            letter-spacing: 0.01em;
+            color: #FFFFFF;
+            -webkit-text-stroke: 1px #54266F;
+            text-shadow: 20px 10px 7px #000000;
+        }
+        span{
+            font-family: 'Red Hat Text';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 140px;
+            line-height: 103%;
+            text-align: center;
+            letter-spacing: 0.01em;
+            -webkit-text-stroke:  2px #D745EF;
+            text-shadow: 15px 10px 5px #000000;       
+            color: transparent;     
+        }
+
+        p{
+
+            font-family: 'Poppins';
+            font-style: italic;
+            font-weight: 300;
+            font-size: 25px;
+            line-height: 38px;
+            color: #FFFFFF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);       
+            margin-top: 15px;
+        }
+
+        .hero-buttons{
+            display: flex;
+            width: fit-content;
+            height: auto;
+            margin: 0;
+            
+
+            a{
+                text-decoration: none;
+                
+                .btn{
+                    cursor: pointer;
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 30px;
+                    text-align: center;
+                    letter-spacing: 0.06em;
+                    color: #FFFFFF;      
+                    width: 216px;
+                    height: 88.8px; 
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 40px;
+                    position: relative;
+                    
+                   
+                    img{
+                        margin: 0 12px 0 0;
+                        z-index: 2;
+                    }
+
+                    h2{
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 30px;
+                        text-align: center;
+                        letter-spacing: 0.06em;
+                        color: #FFFFFF;          
+                        margin: 0;      
+                        z-index: 2;        
+                    }
+                                           
+                }
+                .btn::before{
+                    background-color: #D745EF;
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                    transition: all 0.3s ease-in-out;
+                    width: 0;
+                    height: 100%;
+                    border-radius: 9px;  
+                }
+        
+                .btn:hover::before{
+                    width: 100%;
+                }
+               
+
+                .discord-btn, .telegram-btn{
+                    background: #5D297F;
+                    border-radius: 9px;     
+                    box-shadow: 0px 5px 10px 0px #00000066;
+                    border: none;
+                    margin-right: 30px;
+                }
+                
+            }
+        }
+    }
+
+    .right-side{
+        pointer-events: none;
+        margin: 0;
+        margin-top: 200px;
+        animation-name: floating;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        .hero-logo{
+            margin: 0;
+            pointer-events: none;
+
+        }
+    }
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+@media(max-width: 1250px){
+    .hero-section{
+        .left-side{
+            width: 100%;
+            h1,span{
+                font-size: 100px;
+            }
+
+            p{
+                font-size: 20px;
+            }
+
+            .hero-buttons{
+                margin-left: -10px;
+                a{
+                    button{
+                        transform: scale(0.9);
+                    }
+                    .discord-btn, .telegram-btn{
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    
+        .right-side{
+            .hero-logo{
+                width: 100%;
+            }
+            
+            
+        }
+
+        
+    }
+}
+
+@media(max-width: 1020px){
+    .hero-section{
+        flex-direction: column;
+        padding-bottom: 130px;
+        
+        .background{
+            height: 100%;
+        }
+
+        .left-side{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1{
+                text-align: center;
+            }
+            h1,span{
+                font-size: 85px;
+            }
+
+            p{
+                font-size: 18px;
+                line-height: 25px;
+                text-align: center;
+            }
+
+            .hero-buttons{
+                justify-content: center;
+                align-items: center;
+                margin-top: 30px;
+
+                a{
+                   .discord-btn, .telegram-btn{
+                    margin: 0;
+                   }
+                }
+                
+            }
+        }
+
+        .right-side{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            
+            margin-top: 60px;
+
+            .hero-logo{
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media (max-width:700px){
+    .hero-section{
+        padding-bottom: 60px;
+    }
+}
+
+@media(max-width:565px){
+    .hero-section{
+        padding-left: 50px; padding-right: 50px;
+        
+        .left-side{
+            h1,span{
+                font-size: 65px;
+            }
+
+            p{
+                font-size: 12px;
+                line-height: 17px;
+                text-align: center;
+            }
+
+            .hero-buttons{
+                a{
+                    button{
+                        width: 196px;
+                        height: 68.8px; 
+                    }
+                }
+                
+            }
+        }
+
+        .right-side{
+            .hero-logo{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px){
+    .hero-section{
+        padding-left: 20px; padding-right: 20px;
+
+        .left-side{
+            h1,span{
+                font-size: 55px;
+            }
+            p{
+                font-size: 10px;
+                line-height: 15px;
+                text-align: center;
+            }
+
+            .hero-buttons{
+                flex-direction: column;
+
+                .discord-btn{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
